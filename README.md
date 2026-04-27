@@ -4,18 +4,17 @@ SPDX-FileCopyrightText: 2024 - 2026 University of Manchester
 SPDX-License-Identifier: apache-2.0
 -->
 
-# RSE-Repository-Template
-This is a template repository to be used as the base for all new repos created for RSE projects. It comes with a set of default issues types and settings to ensure a standardised setup compliant with the department process.
+# Agile-Methods-Training-Template-Repository
+This is a template repository to be used as the base for all new repos created for the Agile Methods training course (by a course facilitator). It comes with a set of default issues, types and settings to ensure a standardised setup.
 
 # Immediate Set Up
 The following steps will need to be performed immediately after creating the new repository to complete the set up.
 
 ## Define or Link a Project
-If you don't have a [project](https://github.com/orgs/UoMResearchIT/projects) set up already, you should probably define one for this repository (using the [departmental template project](https://github.com/orgs/UoMResearchIT/projects/33)). If you have one already, you should link it so that it is the default project for this repository.
+Defining and linking a Project to this repository should be performed as part of the initial setup on the course. Learners should be instructed to use the [Agile Methods Training template project](https://github.com/orgs/UoMResearchIT/projects/270/views/1)) to set this up.
 
-> [!TIP]
-> Projects are usually best named with the RTP code as part of the name, but repositories often outlive their project and so usually should not.
-> You may put the RTP code in the `About` section of the main page of the repository; that provides just as much searchability and yet is much easier to change.
+## Alter this README!
+This README should be changed by the course facilitator to leave any instructions that are part of the course learning, and other elements should be deleted before passing the repository on to the learners.
 
 ## Branch Protection Ruleset
 The first thing to do after creating your new repository from this template is to head to `Settings -> Rules -> Rulesets` then choose `Import Ruleset`. You will then need to import the `Key Branch Protection Rules.json` ruleset which is located in the RSE Team SharePoint under [`RSE Team -> Read-Only -> Tools`](https://livemanchesterac.sharepoint.com/sites/UOM-ITS-Research-IT/_layouts/15/download.aspx?UniqueId=b55bbc9bc39b4be29dafaa09b9359b48&e=B6kYNZ).
@@ -102,8 +101,4 @@ If there's a comment format that isn't supported, [file a PR](https://github.com
 ## Setup `.gitignore`
 Setup `.gitignore` according to your project needs, see `.gitignore` templates [here](https://github.com/github/gitignore/tree/main).
 
-## Alter this README!
-Just because you've used the template to make the repository doesn't mean that you shouldn't alter this `README.md` to describe a basic description of the real contents of the code (or issues, for issue-only use). Make fixing that your first Pull Request!
 
-# Suggest Improvements
-Please feel free to suggest improvements to this template by adding issues to [the repository](https://github.com/UoMResearchIT/RSE-Repository-Template/issues).
