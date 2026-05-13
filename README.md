@@ -11,7 +11,7 @@ This is a template repository to be used as the base for all new repos created f
 The following steps will need to be performed immediately after creating the new repository to complete the set up.
 
 ## Define or Link a Project
-Defining and linking a Project to this repository should be performed as part of the initial setup on the course. Learners should be instructed to use the [Agile Methods Training template project](https://github.com/orgs/UoMResearchIT/projects/270/views/1)) to set this up.
+Defining and linking a Project to this repository should be performed as part of the initial setup on the course. Learners should be instructed to use the [Agile Methods Training template project](https://github.com/orgs/UoMResearchIT/projects/270/views/1) to set this up.
 
 ## Alter this README!
 This README should be changed by the course facilitator to leave any instructions that are part of the course learning, and other elements should be deleted before passing the repository on to the learners.
@@ -22,6 +22,9 @@ The first thing to do after creating your new repository from this template is t
 **This ruleset is designed to enforce a GitFlow development process as per the department policy. Please do not relax or disable these rules unless exceptional circumstances dictate it e.g. if an existing CI integration requires a rule to be relaxed.**
 
 _If you use this template outside of the [`UoMResearchIT`](https://github.com/UoMResearchIT) organisation,_ you should instead delete the `check-ruleset.yaml` workflow, as it cannot run successfully (due to its security configuration). You are still expected to adopt the ruleset listed above; it's just not automatically enforced.
+
+## Copy Issues 
+In order to streamline the learning in the requirements gathering chapter, some issues relating to the product have already been created in the template repository.  To copy these issues from the template into the new repository that the learners are going to use, please run the copy-issues workflow from the Actions tab in the new repository.
 
 ## Licensing and Copyright
 Our team policy on software licensing and copyright can be found in the `RSE_Department_Ops_Policies.pdf` document, located in the RSE Team SharePoint under [`RSE Team -> Read-Only -> Policies and Processes`](https://livemanchesterac.sharepoint.com/:b:/r/sites/UOM-ITS-Research-IT/Shared%20Documents/RSE%20Team/Read-Only/Policies%20and%20Processes/RSE_Department_Ops_Policies.pdf). This policy is summarised below for convenience. If any discrepancies between the two arise then the policy document takes precedence over this readme file.
