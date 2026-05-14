@@ -1,16 +1,4 @@
-# GitHub Actions Workflow: Check Repository Ruleset
-#
-# This workflow ensures that the repository's branch protection rules
-# match the expected ruleset defined in the template repository.
-#
-# It runs on pushes to the main branch and pull requests.
-#
-# Steps:
-# 1. Fetch the expected Branch Protection Rulesets from the template repository.
-# 2. Fetch the current repository's Branch Protection Rulesets.
-# 3. Compare the expected and actual rulesets.
-
-# Copyright (c) 2025 The University of Manchester
+# Copyright (c) 2025 - 2026 The University of Manchester
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,7 +21,7 @@ on:
   pull_request:
 
 jobs:
-  check-ruleset:
+  check:
     if: github.repository_owner == 'UoMResearchIT'
     name: Check Ruleset
     uses: UoMResearchIT/actions/.github/workflows/check-ruleset.yaml@main
