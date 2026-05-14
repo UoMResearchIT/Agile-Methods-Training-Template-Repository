@@ -39,21 +39,21 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Fetch Standard RSE Ruleset
         id: expected
-        uses: UoMResearchIT/actions/get-repo-ruleset@v0.3
+        uses: UoMResearchIT/actions/get-repo-ruleset@v1.2
         with:
           repository: UoMResearchIT/RSE-Repository-Template
           token: ${{ secrets.ACTIONS_REPO_TOKEN || secrets.GITHUB_TOKEN }}
 
       - name: Fetch This Repository's Ruleset
         id: current
-        uses: UoMResearchIT/actions/get-repo-ruleset@v0.3
+        uses: UoMResearchIT/actions/get-repo-ruleset@v1.2
 
       - name: Compare Rulesets
-        uses: UoMResearchIT/actions/check-ruleset-containment@v0.3
+        uses: UoMResearchIT/actions/check-ruleset-containment@v1.2
         with:
           current: ${{ steps.current.outputs.filename }}
           expected: ${{ steps.expected.outputs.filename }}
