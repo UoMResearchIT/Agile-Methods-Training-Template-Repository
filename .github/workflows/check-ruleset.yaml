@@ -35,25 +35,9 @@ on:
 jobs:
   check-ruleset:
     if: github.repository_owner == 'UoMResearchIT'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-
-      - name: Fetch Standard RSE Ruleset
-        id: expected
-        uses: UoMResearchIT/actions/get-repo-ruleset@v1.2
-        with:
-          repository: UoMResearchIT/RSE-Repository-Template
-          token: ${{ secrets.ACTIONS_REPO_TOKEN || secrets.GITHUB_TOKEN }}
-
-      - name: Fetch This Repository's Ruleset
-        id: current
-        uses: UoMResearchIT/actions/get-repo-ruleset@v1.2
-
-      - name: Compare Rulesets
-        uses: UoMResearchIT/actions/check-ruleset-containment@v1.2
-        with:
-          current: ${{ steps.current.outputs.filename }}
-          expected: ${{ steps.expected.outputs.filename }}
+    name: Check Ruleset
+    uses: UoMResearchIT/actions/.github/workflows/check-ruleset.yaml@main
+    with:
+      bot-id: ${{ vars.ORG_ACTIONS_BOT_APP_ID }}
+    secrets:
+      bot-key: ${{ secrets.ORG_ACTIONS_BOT_PRIVATE_KEY }}
